@@ -1,0 +1,320 @@
+/* src/index.css */
+
+/* --- General Body & Reset (from before) --- */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  background-color: #f0f2f5; /* Light overall background */
+  color: #333;
+  line-height: 1.6;
+  font-size: 16px; /* Base font size */
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* --- Container (from before) --- */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+main.container {
+  flex-grow: 1;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+/* --- Navbar Styles (ensure these are complete from previous steps) --- */
+.navbar { /* ... */ }
+.navbar .container { /* ... */ }
+.navbar-brand { /* ... */ }
+.nav-links { /* ... */ }
+.nav-links a, .nav-links button { /* ... */ }
+.nav-links .active-link { /* ... */ }
+.navbar-username { /* ... */ }
+.btn-logout { /* ... */ }
+
+
+/* --- General Button Styles (from before, ensure completeness) --- */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 1em;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s, opacity 0.2s, transform 0.1s ease-out;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+.btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px); /* Slight lift on hover */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.btn:active {
+  transform: translateY(0px);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+.btn:disabled { /* ... */ }
+
+.btn-primary { /* ... */ }
+.btn-secondary { /* For Register Now type buttons */
+  background-color: #6c757d;
+  color: white;
+}
+.btn-secondary:hover { background-color: #545b62; }
+
+.btn-success { /* For "Get Started" type buttons */
+  background-color: #28a745;
+  color: white;
+}
+.btn-success:hover { background-color: #1e7e34; }
+
+.btn-lg {
+  padding: 14px 28px;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+
+/* --- Message Styles (from before) --- */
+.success-message { /* ... */ }
+.error-message { /* ... */ }
+
+
+/* --- HomePage Specific Styles --- */
+.home-page-container {
+  /* Can remain empty if sections handle their own full-width backgrounds */
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%); /* Blue gradient */
+  color: white;
+  padding: 80px 0; /* Generous padding */
+  text-align: center;
+  position: relative;
+  overflow: hidden; /* For any decorative elements */
+}
+/* Optional: Decorative pseudo-elements for hero
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  opacity: 0.5;
+} */
+
+.hero-content {
+  position: relative; /* To be above pseudo-elements if used */
+  max-width: 750px;
+}
+
+.hero-title {
+  font-size: 3em; /* Large and impactful */
+  font-weight: 700;
+  margin-bottom: 0.6em;
+  line-height: 1.1;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.hero-subtitle {
+  font-size: 1.25em;
+  margin-bottom: 2em;
+  line-height: 1.7;
+  opacity: 0.95; /* Slightly less prominent than title */
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem; /* More space between hero buttons */
+  flex-wrap: wrap;
+}
+.hero-cta-buttons .btn-secondary.btn-lg { /* Specific style for secondary hero button */
+  background-color: #f8f9fa; /* Light button on dark background */
+  color: #007bff; /* Blue text */
+  border: 1px solid #f8f9fa;
+}
+.hero-cta-buttons .btn-secondary.btn-lg:hover {
+  background-color: #e2e6ea;
+  border-color: #e2e6ea;
+}
+
+
+.authenticated-welcome-home {
+  margin-top: 1em;
+}
+
+.authenticated-welcome-home .success-message.large-success-message {
+  font-size: 1.2em;
+  padding: 15px 25px;
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+  border: none; /* Remove border or make it subtle */
+  color: white;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 500;
+  border-radius: 8px;
+}
+.authenticated-welcome-home .btn-primary.btn-lg { /* Ensure dashboard button contrasts well */
+  background-color: #28a745; /* Green for dashboard button */
+}
+.authenticated-welcome-home .btn-primary.btn-lg:hover {
+  background-color: #1e7e34;
+}
+
+
+/* Features/Services Section */
+.features-section {
+  padding: 60px 0;
+  text-align: center;
+  background-color: #ffffff; /* White background for this section */
+}
+
+.section-title {
+  font-size: 2.3em; /* Consistent section title size */
+  font-weight: 600;
+  color: #343a40; /* Darker gray for titles */
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 15px;
+}
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 70px;
+  height: 3px;
+  background-color: #007bff;
+}
+
+.section-tagline {
+  font-size: 1.1em;
+  color: #6c757d; /* Medium gray */
+  max-width: 750px;
+  margin: 0 auto 50px auto;
+  line-height: 1.7;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.feature-card {
+  background-color: #f8f9fa; /* Light gray for cards */
+  padding: 30px 25px;
+  border-radius: 8px;
+  /* border: 1px solid #e9ecef; */ /* Optional subtle border */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.feature-icon {
+  font-size: 2.5em; /* Emoji size */
+  margin-bottom: 15px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  /* No specific color here, colorClass prop in JSX handles it */
+}
+.icon-blue { color: #007bff; }
+.icon-green { color: #28a745; }
+.icon-orange { color: #fd7e14; }
+/* Add more icon colors if needed: .icon-red, .icon-purple, etc. */
+
+
+.feature-card h3 {
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #212529; /* Darker text for card titles */
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  color: #495057;
+  line-height: 1.65;
+  flex-grow: 1;
+  margin-bottom: 15px;
+}
+
+.feature-link.btn.btn-primary-outline {
+  display: inline-block;
+  margin-top: auto;
+  padding: 8px 16px;
+  font-size: 0.9em;
+  font-weight: 500;
+  text-decoration: none;
+  border: 2px solid #007bff; /* Slightly thicker border */
+  color: #007bff;
+  background-color: transparent;
+  border-radius: 5px;
+  align-self: flex-start;
+}
+.feature-link.btn.btn-primary-outline:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+
+/* CTA Section (Optional) */
+.cta-section {
+  background-color: #343a40; /* Dark background for CTA */
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+  margin-top: 50px;
+}
+.cta-section h2 {
+  font-size: 2em;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.cta-section p {
+  font-size: 1.15em;
+  margin-bottom: 30px;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.9;
+}
+/* .btn-success.btn-lg is already defined if using general .btn and .btn-lg styles */
+
+
+/* Footer Styles (from before, ensure consistency) */
+.footer { /* ... */ }
+.footer p { /* ... */ }
